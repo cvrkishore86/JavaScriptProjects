@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/w3css/w3-theme-teal.css">
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="userCtrl">
+
+<div class="w3-container">
+
+<h3>Users</h3>
+
+
+
+<hr>
+<button class="w3-btn w3-theme" ng-click="editUser('new')">
+ Create New User
+</button>
+<hr>
+
+<h3 ng-show="edit">Create New User:</h3>
+<h3 ng-hide="edit">Edit User:</h3>
+
+<form class="w3-container w3-card-4">
+  <div class="w3-group">
+    <input class="w3-input" type="text" ng-model="fName" ng-disabled="!edit"  required>
+    <label class="w3-label">First Name:</label>
+  </div> 
+  <div class="w3-group">
+    <input  class="w3-input" type="text" ng-model="lName" ng-disabled="!edit"  required>
+    <label class="w3-label">Last Name:</label>
+  </div>
+  <div class="w3-group">
+    <input  class="w3-input" type="password" ng-model="passw1" required>
+    <label class="w3-label">Password:</label>
+  </div>
+  <div class="w3-group">
+    <input  class="w3-input" type="password" ng-model="passw2" required>
+    <label class="w3-label">Repeat:</label>
+  </div>
+  <div class="w3-group">
+    <input  class="w3-input" type="phnr" ng-model="phnr" required>
+    <label class="w3-label">Phone Number:</label>
+  </div>
+  <div class="w3-group">
+  	<h6 class= "w3-text-theme">Blood Group: </h6>
+    <select class="w3-select" name="bloodGroupSelect" id="bloodGroupSelect" ng-model="bloodGroup" required>
+    <option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
+      </select>
+      
+   </div>
+  
+</form>
+ <button class="w3-btn w3-theme" ng-disabled="error || incomplete" ng-click="addUser()">
+Save Changes
+</button>
+<hr>
+
+<div class="w3-responsive w3-card-4">
+<table class="w3-table w3-striped w3-bordered">
+  <thead>
+    <tr class="w3-theme">
+      <th>Edit</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Mobile</th>
+      <th>Blood Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users">
+      <td>
+        <button class="w3-btn w3-theme" ng-click="editUser(user.id)">
+            Edit
+        </button>
+      </td>
+      <td>{{ user.fName }}</td>
+      <td>{{ user.lName }}</td>
+      <td>{{ user.phnr }}</td>
+      <td>{{ user.bloodGroup }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+<script >
+angular.module('myApp', [])
+.controller('userCtrl', function($scope) {
+  $scope.data = {
+   availableOptions: [
+     {id: 'O+', name: 'O+'},
+     {id: 'O-', name: 'O-'},
+     {id: 'A+', name: 'A+'},
+     {id: 'A-', name: 'A-'},
+     {id: 'B+', name: 'B+'},
+     {id: 'B-', name: 'B-'},
+     {id: 'AB+', name: 'AB+'},
+     {id: 'AB-', name: 'AB-'}
+   ]
+ //This sets the default value of the select in the ui
+   };
+
+
+$scope.fName = '';
+$scope.lName = '';
+$scope.passw1 = '';
+$scope.passw2 = '';
+$scope.users = [];
+$scope.edit = true;
+$scope.error = false;
+$scope.incomplete = false; 
+$scope.id = 0;
+$scope.editUser = function(id) {
+  if (id == 'new') {
+    $scope.edit = true;
+    $scope.incomplete = true;
+    $scope.fName = '';
+    $scope.lName = '';
+    $scope.phnr = '';
+    $scope.bloodGroup = '';
+    $scope.passw1 = '';
+    $scope.passw2 = '';
+    
+    } else {
+    $scope.edit = false;
+    $scope.fName = $scope.users[id-1].fName;
+    $scope.lName = $scope.users[id-1].lName;
+    $scope.phnr = $scope.users[id-1].phnr; 
+    $scope.bloodGroup = $scope.users[id-1].bloodGroup; 
+  }
+};
+
+$scope.addUser = function() {
+	$scope.id = $scope.id + 1;
+	  $scope.users.push({id : $scope.id , fName: $scope.fName, lName:  $scope.lName ,phnr : $scope.phnr , bloodGroup : $scope.bloodGroup });
+	    $scope.edit = true;
+	    $scope.incomplete = true;
+	    $scope.fName = '';
+	    $scope.lName = '';
+	    $scope.phnr = '';
+	    $scope.bloodGroup = '';
+	    $scope.passw1 = '';
+	    $scope.passw2 = '';
+	   
+	  
+	};
+
+
+$scope.$watch('passw1',function() {$scope.test();});
+$scope.$watch('passw2',function() {$scope.test();});
+$scope.$watch('fName', function() {$scope.test();});
+$scope.$watch('lName', function() {$scope.test();});
+
+$scope.test = function() {
+  if ($scope.passw1 !== $scope.passw2) {
+    $scope.error = true;
+    } else {
+    $scope.error = false;
+  }
+  $scope.incomplete = false;
+  if ($scope.edit && (!$scope.fName.length ||
+  !$scope.lName.length ||
+  !$scope.passw1.length || !$scope.passw2.length)) {
+     $scope.incomplete = true;
+  }
+};
+
+});
+
+</script>
+
+</body>
+</html>

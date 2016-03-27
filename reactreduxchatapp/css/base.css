@@ -1,0 +1,147 @@
+body {
+  background: #fff;
+  
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 30px;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 5px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, ul {
+  margin: 15px 0;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+
+.textDecor{
+  text-decoration: none;
+   
+}
+
+.rightSide{
+   
+margin-right: 20px;
+    text-align: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+ }
+
+ .leftSide{
+  
+margin-left: 20px;
+    text-align: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+ }
+
+ .textStyle{
+
+  padding: 5px 5px 5px 5px;
+  background-color: #FFFFFF;
+  margin-top: 20px;
+
+
+ 
+ }
+ .chatBox{
+  border-style: solid;
+    border-color: #ccffff;
+    background-color: #ccffff;
+ }
+ .colorbg{
+  background-color: #80ffff;
+ }
+
+ .authorStyle{
+background-color: #FFFFFF;
+padding: 8px 8px 5px 5px;
+ }
+
+ .messageStyle{
+  padding: 5px 3px 5px 8px;
+ }
+
+ .messageStyleRight{
+    float:right;
+    margin-left: auto;
+    margin-top: -34px;
+   
+ }
+
+ .authorStyleRight{
+  background-color: #FFFFFF;
+  padding: 20px 8px 5px 5px;
+ }
+
+ 
+
+.check_box {
+    display:none;
+}
+
+.check_box + label{
+    background:url('images/check-box.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.check_box:checked + label{
+    background:url('images/check-box-checked.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+

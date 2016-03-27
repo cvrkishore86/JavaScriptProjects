@@ -1,0 +1,50 @@
+
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+  -webkit-filter: brightness(1) grayscale(1) opacity(.8);
+       -moz-filter: brightness(1) grayscale(1) opacity(.8);
+            filter: brightness(1) grayscale(1) opacity(.8);
+}
+
+.imageSpanStyle{
+ position: absolute; 
+
+}
+.imageStyle{
+position: relative; 
+ 
+  height: 80px;
+  width: 80px;
+}
+
+
+input[type="checkbox"]  {
+    background:url(320px.png) no-repeat scroll 0 0 transparent;
+    width:300px;
+    height:300px;
+    cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+   appearance:    none;
+   
+     display:inline-block;
+     margin: 0px;
+    
+}
+input[type="checkbox"]:checked {
+    
+    border:2px solid #f00;
+  -webkit-filter: brightness(1) grayscale(1) opacity(.8);
+       -moz-filter: brightness(1) grayscale(1) opacity(.8);
+            filter: brightness(1) grayscale(1) opacity(.8);
+}

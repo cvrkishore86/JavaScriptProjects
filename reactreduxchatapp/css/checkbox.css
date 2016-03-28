@@ -16,17 +16,30 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
             filter: brightness(1) grayscale(1) opacity(.8);
 }
 
+.container {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    left: 10%;
+    bottom: 95px;
+    width: 80%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
 .imageSpanStyle{
  position: absolute; 
 
 }
 .imageStyle{
-position: relative; 
- 
-  height: 80px;
-  width: 80px;
+  height: 200px;
+  width: 200px;
 }
-
 
 input[type="checkbox"]  {
     background:url(320px.png) no-repeat scroll 0 0 transparent;

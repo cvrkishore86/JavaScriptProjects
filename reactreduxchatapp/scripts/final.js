@@ -1,5 +1,4 @@
 
-
 const {createStore,combineReducers} = Redux;
 
 
@@ -348,12 +347,12 @@ var RadioButtonList = React.createClass({
 
 
   return (
-    <label>
+    <label className="container">
     <input type="radio"  name={this.props.name} target={this.props.target} 
     value={this.props.text} key={this.props.key} 
     onClick={this.onRadioButtonSelect}/>
     <img className ="imageStyle" src="./scripts/circle.png"></img>
-    {this.props.text} 
+    <div className="center"> {this.props.text} </div>
     </label>
     );
 },
@@ -457,9 +456,5 @@ ReactDOM.render(
 
 store.subscribe(render);
 render();  
-
-
-
-
 
 

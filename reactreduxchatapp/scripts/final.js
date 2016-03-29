@@ -13,7 +13,7 @@ const dataarray = [
  const radioOptionsJSON = {
   accounts:[
   {name:"Profileflagselected", target :[3], removetarget:3 ,text:"Authentication", key:0},
-  {name:"Profileflagselected", target :[4], removetarget:3 ,text:"Profile/Account", key:1},
+  {name:"Profileflagselected", target :[4], removetarget:3 ,text:"Profile/        Account", key:1},
   {name:"Profileflagselected", target :[5], removetarget:3 ,text:"Transaction", key:2},
   {name:"Profileflagselected", target :[6,7], removetarget:3 , text:"Other", key:3}
   ],
@@ -319,20 +319,22 @@ var RadioButton = React.createClass({
       return(
 
         <RadioButtonList handler={this.props.handler} masterData={this.props.masterData} key={button.key}  name={button.name}
-        target={button.target} removetarget={button.removetarget} text={button.text}
-         > 
+        target={button.target} removetarget={button.removetarget} text={button.text}> 
         </RadioButtonList>
 
         ); 
     });
 
     return (
-      <span>
-      <br/>
+<div>
+<br/>
+      <span className="spanStyle">
       {Buttonitem}
-      <hr/>
-      <br/>
       </span>
+      <br/>
+      <br/>
+      <hr/>
+      </div>
       );
 
   }
@@ -347,13 +349,36 @@ var RadioButtonList = React.createClass({
 
 
   return (
-    <label className="container">
+    /*<span className="outer">
+    <label className="circle">
+ 
+    <input type="radio"  name={this.props.name} target={this.props.target} 
+    value={this.props.text} key={this.props.key} 
+    onClick={this.onRadioButtonSelect}/>
+    <span className ="circleText">{this.props.text}</span>
+   
+    </label>
+    </span>
+*/
+
+
+<span className="outer">
+  <label className="inner">
+ <input type="radio"  name={this.props.name} target={this.props.target} 
+    value={this.props.text} key={this.props.key} 
+    onClick={this.onRadioButtonSelect}/>
+
+   <span className="circleText">{this.props.text}</span>
+  </label>
+</span>
+
+    /*<!-- <label className="container">
     <input type="radio"  name={this.props.name} target={this.props.target} 
     value={this.props.text} key={this.props.key} 
     onClick={this.onRadioButtonSelect}/>
     <img className ="imageStyle" src="./scripts/circle.png"></img>
     <div className="center"> {this.props.text} </div>
-    </label>
+    </label> -->*/
     );
 },
 
@@ -418,7 +443,7 @@ var Message = React.createClass({
     
      return (
      <div className={styleVar} >
-     <span className="imageStyle">
+     <span >
      
       <RadioButton handler={this.messageRadioClick} options={this.props.message.options} masterData={this.props.masterData} /> 
          

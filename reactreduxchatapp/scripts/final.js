@@ -82,7 +82,7 @@ const dbDataarray = [
       {key: 8, author: "system", text: "Thats ok... Please provide the required info about you!!"},
 
       {key: 9,  author: "user", type:"RadioButton" ,options:"Iniatator"},
-      {key: 10, author: "system", text: "USAA Number"},
+      {key: 10, author: "system", text: "Member Number"},
       {key: 11, author: "user", type:"input", name:"Member Number"},
       {key: 12, author: "user",target: [13,14,15], text: "OK!"},
 

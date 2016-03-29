@@ -12,46 +12,46 @@ const dataarray = [
       ] ;
  const radioOptionsJSON = {
   accounts:[
-  {name:"Profileflagselected", target :[3], removetarget:3 ,text:"Authentication", key:0},
-  {name:"Profileflagselected", target :[4], removetarget:3 ,text:"Profile/        Account", key:1},
-  {name:"Profileflagselected", target :[5], removetarget:3 ,text:"Transaction", key:2},
-  {name:"Profileflagselected", target :[6,7], removetarget:3 , text:"Other", key:3}
+  {name:"Profileflagselected", target :[3], removetarget:2 ,text:"Authentication", key:0},
+  {name:"Profileflagselected", target :[4], removetarget:2 ,text:"Profile/        Account", key:1},
+  {name:"Profileflagselected", target :[5], removetarget:2 ,text:"Transaction", key:2},
+  {name:"Profileflagselected", target :[6,7], removetarget:2 , text:"Other", key:3}
   ],
   authenticationFlags:[
-{name:"AuthenticationSelected", target :[8,9], removetarget:8 ,text: "authentication ", key:0},
-{name:"AuthenticationSelected", target :[8,9], removetarget:8 ,text: "repeated question", key:1},
-{name:"AuthenticationSelected", target :[8,9], removetarget:8 , text: "wrong password", key:2},
-{name:"AuthenticationSelected", target :[8,9], removetarget:8 ,text: "suspicious voice", key:3},
+{name:"AuthenticationSelected", target :[8,9], removetarget:3 ,text: "authentication ", key:0},
+{name:"AuthenticationSelected", target :[8,9], removetarget:3 ,text: "repeated question", key:1},
+{name:"AuthenticationSelected", target :[8,9], removetarget:3 , text: "wrong password", key:2},
+{name:"AuthenticationSelected", target :[8,9], removetarget:3 ,text: "suspicious voice", key:3},
   ],
    ProfileAccountFlags:[
-{name:"ProfileAccountSelected", target :[8,9], removetarget:8 , text:"true person initate account?", key:0},
-{name:"profileAccountSelected", target :[8,9], removetarget:8 ,text:"true person responding?", key:1},
-{name:"profileAccountSelected", target :[8,9], removetarget:8 ,text:"large activity", key:2},
+{name:"ProfileAccountSelected", target :[8,9], removetarget:4 , text:"true person initate account?", key:0},
+{name:"ProfileAccountSelected", target :[8,9], removetarget:4 ,text:"true person responding?", key:1},
+{name:"ProfileAccountSelected", target :[8,9], removetarget:4 ,text:"large activity", key:2},
   ],
   TransactionFlags:[
-{name:"TransactionSelected", target :[8,9], removetarget:8 ,text:"request to alternate address", key:0},
-{name:"TransactionSelected", target :[8,9], removetarget:8 ,text:"request an ATM limit increase", key:1},
+{name:"TransactionSelected", target :[8,9], removetarget:5 ,text:"request to alternate address", key:0},
+{name:"TransactionSelected", target :[8,9], removetarget:5 ,text:"request an ATM limit increase", key:1},
   ],
   Iniatator:[
-{name:"IniatatorValue", target :[10,11,12], removetarget:10 ,text:"MSR", key:0},
-{name:"IniatatorValue", target :[10,11,12], removetarget:10 ,text:"Member", key:1},
+{name:"IniatatorValue", target :[10,11,12], removetarget:9 ,text:"MSR", key:0},
+{name:"IniatatorValue", target :[10,11,12], removetarget:9 ,text:"Member", key:1},
   ],
   CoSA:[
-{name:"CoSAValue", target :[20], removetarget:20 ,text:"Bank", key:0},
-{name:"CoSAValue", target :[21], removetarget:20 ,text:"Investment", key:1},
-{name:"CoSAValue", target :[22], removetarget:20 ,text:"Life", key:2},
-{name:"CoSAValue", target :[23], removetarget:20 ,text:"P&C", key:3},
+{name:"CoSAValue", target :[20], removetarget:19 ,text:"Bank", key:0},
+{name:"CoSAValue", target :[21], removetarget:19 ,text:"Investment", key:1},
+{name:"CoSAValue", target :[22], removetarget:19 ,text:"Life", key:2},
+{name:"CoSAValue", target :[23], removetarget:19 ,text:"P&C", key:3},
   ],
   BankTypes:[
-{name:"BankTypesValue", target :[24,25,26], removetarget:24,text:"Credit Card", key:0},
-{name:"BankTypesValue", target :[24,25,26], removetarget:24 ,text:"Savings", key:1},
-{name:"BankTypesValue", target :[24,25,26], removetarget:24 ,text:"Debit Card", key:2},
-{name:"BankTypesValue", target :[24,25,26], removetarget:24 ,text:"Consumer Loan", key:3}
+{name:"BankTypesValue", target :[24,25,26], removetarget:22,text:"Credit Card", key:0},
+{name:"BankTypesValue", target :[24,25,26], removetarget:22 ,text:"Savings", key:1},
+{name:"BankTypesValue", target :[24,25,26], removetarget:22 ,text:"Debit Card", key:2},
+{name:"BankTypesValue", target :[24,25,26], removetarget:22 ,text:"Consumer Loan", key:3}
   ],
   InvestmentTypes:[
-{name:"InvestmentTypesValue", target :[24,25,26], removetarget:24,text:"Brokerage", key:0},
-{name:"InvestmentTypesValue", target :[24,25,26], removetarget:24 ,text:"Mutual Funds", key:1},
-{name:"InvestmentTypesValue", target :[24,25,26], removetarget:24 ,text:"Wire", key:2}
+{name:"InvestmentTypesValue", target :[24,25,26], removetarget:23,text:"Brokerage", key:0},
+{name:"InvestmentTypesValue", target :[24,25,26], removetarget:23 ,text:"Mutual Funds", key:1},
+{name:"InvestmentTypesValue", target :[24,25,26], removetarget:23 ,text:"Wire", key:2}
   ],
   LifeTypes:[
   {name:"LifeValue", target :[24,25,26], removetarget:24,text:"Annuities", key:0},
@@ -127,7 +127,7 @@ const dbDataarray = [
 
 
       {key: 40, author: "final", text: "We have received your request, we will get back to u soon"},
-      
+       {key: 42, author: "user", text: "Test Message"}
 
       ];
 
@@ -152,9 +152,10 @@ var messagematcher = function(key, value) {
   return value.key===key;
 }
 
-var messagefilter = function(key, value) {
-  
-  return key > value.key;
+var messagefilter = function(optionsname, value) {
+  console.log("optionsname "+optionsname)
+  console.log("valueoptions "+value.options)
+  return optionsname === value.key;
 }
 const messagePusher = (action) => {
     
@@ -168,13 +169,16 @@ const messagePusher = (action) => {
       for (var i = 0; i < target.length; i++)
       {
         var matching = store.getState().data.filter(messagematcher.bind(null, target[i]));
-        if(matching.length == 0 )       
-          messages.push(dataBase[target[i]]);
-
+        if(matching.length == 0 )      { 
+            console.log("db filter")
+            var filtered = dataBase.filter(messagematcher.bind(null, target[i]));
+          
+          messages.push(...filtered);
+          }
       }
      
       var newMessages =[...store.getState().data, ...messages]
-      
+      console.log(newMessages)
       return newMessages;
     } {
        return [...store.getState().data];
@@ -188,12 +192,22 @@ const messageRemover = (action) => {
     
         
     var target  = action.target;
+   var optionsname= target.optionsname;
+   var data = store.getState().data;
     
-    
-    if (target != null) {
-
-        var newMessages = store.getState().data.filter(messagefilter.bind(null, target.target));
+    console.log(optionsname)
+    if (optionsname != null) {
+      var index = data.length;
+      for (var i = 0; i < data.length; i++)
+      {
+        if(data[i].options === optionsname) {
+          index = i;
+          console.log(i)
+        }
+      }
        
+        var newMessages = store.getState().data.slice(0, index+1);
+       console.log(newMessages)
       
       return newMessages;
     } {
@@ -274,11 +288,33 @@ var ChatBox = React.createClass({
      <div className = "chatBox">
      <h1 className="colorbg">Chat App</h1>
      <MessageList />
-
+     <ScrollDiv/>
      </div>
 
      );
   }});
+
+
+var ScrollDiv = React.createClass({
+
+  render: function() {
+    
+    return (
+
+     <div >
+     </div>
+
+     );
+  },
+componentDidUpdate :function(prevProps) {
+    // only scroll into view if the active item changed last render
+    
+      var node = ReactDOM.findDOMNode(this);
+      node.scrollIntoView({block: "end", behavior: "smooth"});
+    
+  }
+});
+
 
 
 var MessageList = React.createClass({
@@ -318,7 +354,7 @@ var RadioButton = React.createClass({
       
       return(
 
-        <RadioButtonList handler={this.props.handler} masterData={this.props.masterData} key={button.key}  name={button.name}
+        <RadioButtonList handler={this.props.handler} optionsname={this.props.options} masterData={this.props.masterData} key={button.key}  name={button.name}
         target={button.target} removetarget={button.removetarget} text={button.text}> 
         </RadioButtonList>
 
@@ -346,45 +382,31 @@ var RadioButtonList = React.createClass({
 
  render:   function()
  {
-
-
+  var checkedValue = "";
+  var selectedStyle = "outer";
+ var value =  store.getState().form[this.props.name] ;
+if (value === this.props.text) {
+  checkedValue = "checked";
+  selectedStyle = "outer outerselected";
+}
   return (
-    /*<span className="outer">
-    <label className="circle">
- 
-    <input type="radio"  name={this.props.name} target={this.props.target} 
-    value={this.props.text} key={this.props.key} 
-    onClick={this.onRadioButtonSelect}/>
-    <span className ="circleText">{this.props.text}</span>
    
-    </label>
-    </span>
-*/
 
-
-<span className="outer">
+<span className={selectedStyle}>
   <label className="inner">
  <input type="radio"  name={this.props.name} target={this.props.target} 
-    value={this.props.text} key={this.props.key} 
+    value={this.props.text} key={this.props.key} defaultChecked={checkedValue}
     onClick={this.onRadioButtonSelect}/>
 
    <span className="circleText">{this.props.text}</span>
   </label>
 </span>
 
-    /*<!-- <label className="container">
-    <input type="radio"  name={this.props.name} target={this.props.target} 
-    value={this.props.text} key={this.props.key} 
-    onClick={this.onRadioButtonSelect}/>
-    <img className ="imageStyle" src="./scripts/circle.png"></img>
-    <div className="center"> {this.props.text} </div>
-    </label> -->*/
     );
 },
 
 onRadioButtonSelect: function(event)  {
-
-  event.preventDefault();  
+ 
   var value = this.props.text;
   var target = this.props.target;
   
@@ -393,10 +415,12 @@ onRadioButtonSelect: function(event)  {
     value : this.props.text
   }))
 store.dispatch(removeMessage({
-    target: this.props.removetarget
-   
+    target: this.props.removetarget,
+    optionsname :this.props.optionsname
   }))
+
 this.props.handler({target : target});
+
 }
 
 
@@ -445,7 +469,7 @@ var Message = React.createClass({
      <div className={styleVar} >
      <span >
      
-      <RadioButton handler={this.messageRadioClick} options={this.props.message.options} masterData={this.props.masterData} /> 
+      <RadioButton handler={this.messageRadioClick}   options={this.props.message.options} masterData={this.props.masterData} /> 
          
      </span>
      </div>);

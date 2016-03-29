@@ -123,15 +123,27 @@ align-items: center; /* align vertical */
 
 
 }
+
+
 .outer{
 padding: 5px;
 }
-span.outer:hover{
+.outer:hover{
+ border: 10px solid #0093b8;
+ -webkit-border-radius: 500px;
+width: 150px;
+  height: 150px;
+display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+}
+
+.outerselected{
 
  border: 10px solid #0093b8;
  -webkit-border-radius: 500px;
-width: 160px;
-  height: 160px;
+width: 150px;
+  height: 150px;
 display: flex;
 justify-content: center; /* align horizontal */
 align-items: center; /* align vertical */

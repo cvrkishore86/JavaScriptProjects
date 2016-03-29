@@ -1,15 +1,18 @@
 
 
-label > input{ /* HIDE RADIO */
+
+
+
+span >label > input{ /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */
 }
-label > input + img{ /* IMAGE STYLES */
+span > label > input{ /* IMAGE STYLES */
   cursor:pointer;
   border:2px solid transparent;
 
 }
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+span > label > input:checked { /* (RADIO CHECKED) IMAGE STYLES */
   border:2px solid #f00;
   -webkit-filter: brightness(1) grayscale(1) opacity(.8);
        -moz-filter: brightness(1) grayscale(1) opacity(.8);
@@ -18,6 +21,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .container {
     position: relative;
+
+
 }
 
 .center {
@@ -40,9 +45,14 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   height: 200px;
   width: 200px;
 }
+.imageStyle:hover{
+
+
+}
+
 
 input[type="checkbox"]  {
-    background:url(320px.png) no-repeat scroll 0 0 transparent;
+   
     width:300px;
     height:300px;
     cursor: pointer;
@@ -60,4 +70,74 @@ input[type="checkbox"]:checked {
   -webkit-filter: brightness(1) grayscale(1) opacity(.8);
        -moz-filter: brightness(1) grayscale(1) opacity(.8);
             filter: brightness(1) grayscale(1) opacity(.8);
+}
+
+.spanStyle{
+  display: -webkit-inline-box;
+  padding-bottom: 20px;
+
+}
+
+
+/*.outer:hover{
+ border: 10px solid #0093b8;
+ -webkit-border-radius: 500px;
+width: 130px;
+  height: 130px;
+display: flex;
+justify-content: center; /* align horizontal */
+/*align-items: center;  align vertical 
+}*/
+
+
+
+
+
+.circleText{
+
+left:10%;
+color: #ffffff;
+text-align: center;
+width:80%;
+top: 40%; 
+font-weight:bold;
+word-wrap: break-word;
+
+}
+
+
+
+.inner{
+ background:#0093b8;
+
+width: 150px;
+  height: 150px;
+ -webkit-border-radius: 500px;
+
+display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+    
+
+
+
+
+}
+.outer{
+padding: 5px;
+}
+span.outer:hover{
+
+ border: 10px solid #0093b8;
+ -webkit-border-radius: 500px;
+width: 160px;
+  height: 160px;
+display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+
+
+
+
+
 }
